@@ -31,11 +31,9 @@ const Table = ({ data }: { data: StockItems }) => {
   const addItem: SubmitHandler<StockItem> = (data) => add(data);
 
   useEffect(() => {
-    console.log("success changed at least.", { isSubmitSuccessful });
     if (isSubmitSuccessful) {
       refresh();
       reset();
-      console.log("success");
     }
   }, [isSubmitSuccessful]);
 
@@ -44,9 +42,9 @@ const Table = ({ data }: { data: StockItems }) => {
       <MainTable>
         <thead>
           <tr>
-            <HeadCell>Name</HeadCell>
-            <HeadCell>Manufacturer</HeadCell>
-            <HeadCell>Stock Level</HeadCell>
+            <HeadCell size={"long"}>Name</HeadCell>
+            <HeadCell size={"long"}>Manufacturer</HeadCell>
+            <HeadCell size={"normal"}>Stock Level</HeadCell>
             <HeadCell size={"short"}>-</HeadCell>
           </tr>
         </thead>
@@ -142,30 +140,28 @@ const MainTable = styled.table`
   width: 850px;
   max-width: 100vw;
   border-collapse: collapse;
-  font-family: Tahoma, Geneva, sans-serif;
-  table tbody td {
-    color: rgb(99, 99, 99);
-    border: 1px solid rgb(221, 223, 225);
-  }
-  table tbody tr {
-    background-color: rgb(249, 250, 251);
-  }
-  table tbody tr:nth-child(odd) {
-    background-color: rgb(255, 255, 255);
-  }
 `;
 
-const Cell = styled.td`
+const Cell = styled.td<{ size?: "short" | "normal" | "long" }>`
   padding: 15px;
+  ${(p) => p.size === "long" && `width: 250px;`};
+  ${(p) => p.size === "normal" && `width: 100px;`};
+  ${(p) => p.size === "short" && `width: 50px;`};
 `;
 
-const HeadCell = styled(Cell).attrs({ as: "th" })<{ size?: "short" }>`
+const HeadCell = styled(Cell).attrs({ as: "th" })`
   text-align: start;
-  background-color: rgb(84, 88, 93);
-  color: rgb(255, 255, 255);
   font-weight: bold;
   font-size: 13px;
+  background-color: rgb(84, 88, 93);
+  color: rgb(255, 255, 255);
   border: 1px solid rgb(84, 88, 93);
+
+  @media (prefers-color-scheme: dark) {
+    background-color: rgb(171, 167, 192);
+    color: rgb(0, 0, 0);
+    border: 1px solid rgb(171, 167, 192);
+  }
   ${(p) => p.size === "short" && `text-align: center;`};
 `;
 
@@ -173,24 +169,35 @@ const Row = styled.tr`
   transition-property: filter, background-color;
   transition-timing-function: ease-out;
   transition-duration: 0.2s;
+
   background-color: rgb(249, 250, 251);
   &:nth-child(odd) {
     background-color: rgb(255, 255, 255);
   }
+  @media (prefers-color-scheme: dark) {
+    background-color: rgb(20, 20, 20);
+    &:nth-child(odd) {
+      background-color: rgb(0, 0, 0);
+    }
+  }
   filter: blur(0px);
   &[data-pending-delete="true"] {
     background-color: rgb(249, 225, 225);
+    @media (prefers-color-scheme: dark) {
+      background-color: rgb(50, 4, 4);
+    }
     filter: blur(1px);
   }
 `;
 
-const BodyCell = styled(Cell)<{ size?: "short" | "normal" | "long" }>`
+const BodyCell = styled(Cell)`
   text-align: start;
   color: rgb(99, 99, 99);
   border: 1px solid rgb(221, 223, 225);
-  ${(p) => p.size === "long" && `width: 250px;`};
-  ${(p) => p.size === "normal" && `width: 100px;`};
-  ${(p) => p.size === "short" && `width: 50px;`};
+  @media (prefers-color-scheme: dark) {
+    color: rgb(155, 155, 155);
+    border: 1px solid rgb(44, 46, 30);
+  }
 `;
 
 const GenericButton = styled.button``;
@@ -215,12 +222,17 @@ const ConfirmDeleteDialogue = styled.div`
   max-width: 95vw;
   height: 150px;
   padding: 20px;
-  background-color: rgba(230, 230, 230, 0.7);
-  border: 1px solid rgba(255, 255, 255, 0.8);
   border-radius: 4px;
   backdrop-filter: blur(3px);
   gap: 10px;
 
+  background-color: rgba(230, 230, 230, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+
+  @media (prefers-color-scheme: dark) {
+    background-color: rgba(25, 25, 25, 0.7);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+  }
   transition: opacity 0.5s ease-out;
   opacity: 0;
   pointer-events: none;
@@ -249,10 +261,15 @@ const CancelButton = styled(GenericButton)`
 
 const Input = styled.input`
   outline: 0 none;
-  border: 1px solid rgba(100, 100, 100, 0.8);
   border-radius: 4px;
   padding: 5px;
   width: 100%;
+
+  border: 1px solid rgba(100, 100, 100, 0.8);
+
+  @media (prefers-color-scheme: dark) {
+    border: 1px solid rgba(155, 155, 155, 0.8);
+  }
   transition: border-left-width 0.2s ease-in;
   &[data-error] {
     border-left-width: 8px;
