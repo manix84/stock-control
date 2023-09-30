@@ -1,0 +1,22 @@
+[
+  {
+    "name": "test",
+    "manufacturer": "test",
+    "stockLevel": "1"
+  },
+  {
+    "name": "something",
+    "manufacturer": "something",
+    "stockLevel": "50"
+  },
+  {
+    "name": "!@£$!@£",
+    "manufacturer": "asdfasdf",
+    "stockLevel": "00"
+  },
+  {
+    "name": "asdf",
+    "manufacturer": "asdf",
+    "stockLevel": 0
+  }
+]
