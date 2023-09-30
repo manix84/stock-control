@@ -15,17 +15,15 @@ const Background = () => {
         { duration: 7000, fill: "forwards" }
       );
     };
-    window.addEventListener("pointermove", pointerMove);
-    return () => window.removeEventListener("pointermove", pointerMove);
+    addEventListener("pointermove", pointerMove);
+    return () => removeEventListener("pointermove", pointerMove);
   }, []);
 
   return (
-    <>
-      <Container>
-        <Overlay />
-        <Element ref={elementRef} />
-      </Container>
-    </>
+    <Container>
+      <Overlay />
+      <Element ref={elementRef} />
+    </Container>
   );
 };
 export default Background;
@@ -51,10 +49,14 @@ const Element = styled.div`
   top: 50%;
   translate: -50% -50%;
   border-radius: 50%;
-  background: linear-gradient(to right, aquamarine, mediumpurple);
   animation: ${rotate} 20s infinite;
   opacity: 0.8;
   z-index: -2;
+
+  background: linear-gradient(to right, rgb(127, 255, 212), rgb(147, 112, 219));
+  @media (prefers-color-scheme: dark) {
+    background: linear-gradient(to right, rgb(0, 127, 84), rgb(73, 56, 109));
+  }
 `;
 
 const Container = styled.div`
