@@ -47,4 +47,5 @@ module.exports = {
   env: {
     basePath,
   },
+  pageExtensions: ["mdx", "md", "jsx", "js", "tsx", "ts"],
 };
