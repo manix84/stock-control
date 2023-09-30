@@ -26,7 +26,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
           .status(400)
           .json({ success: false, error: "Missing data", error_id: 2 });
       }
-      if (id) {
+      if (id !== undefined) {
         dbase[id] = { name, manufacturer, stockLevel };
       } else {
         dbase.push({ name, manufacturer, stockLevel });

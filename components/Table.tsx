@@ -1,34 +1,29 @@
-import { mdiCheck, mdiClose, mdiPlus, mdiTrashCanOutline } from "@mdi/js";
+import { mdiPencil, mdiTrashCanOutline } from "@mdi/js";
 import Icon from "@mdi/react";
 import { useContext, useEffect, useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 import styled from "styled-components";
 import { StockItem, StockItems } from "../@types";
 import { stockContext } from "../context/stock";
+import { AddRow } from "./Table/AddRow";
+import { DeleteDialogue } from "./Table/DeleteDialogue";
+import { EditDialogue } from "./Table/EditDialogue";
 
 const Table = ({ data }: { data: StockItems }) => {
-  const { add, edit, remove, refresh, isLoaded } = useContext(stockContext);
+  const { edit, refresh } = useContext(stockContext);
 
-  const [showConfirmDelete, setShowConfirmDelete] = useState<number | null>(
-    null
-  );
-  const confirmDelete = (id: number) => {
-    remove(id)
-      .then(() => {
-        setShowConfirmDelete(null);
-        refresh();
-      })
-      .catch((err) => console.log(err));
-  };
+  const [showDeleteDiaglogue, setShowDeleteDiaglogue] = useState<number>();
+  const [showEditDialogue, setShowEditDialogue] = useState<number>();
 
   const {
     register,
     handleSubmit,
     reset,
     formState: { errors, isLoading, isSubmitSuccessful },
-  } = useForm<StockItem>();
+  } = useForm<StockItem & { id?: number }>();
 
-  const addItem: SubmitHandler<StockItem> = (data) => add(data);
+  const editItem: SubmitHandler<StockItem & { id?: number }> = (data) =>
+    edit(data.id as number, data);
 
   useEffect(() => {
     if (isSubmitSuccessful) {
@@ -50,99 +45,47 @@ const Table = ({ data }: { data: StockItems }) => {
         </thead>
         <tbody>
           {data.map((item: StockItem, id: number) => (
-            <Row data-id={id} data-pending-delete={id === showConfirmDelete}>
+            <Row
+              key={`stock_row_${id}`}
+              data-id={id}
+              data-pending-delete={id === showDeleteDiaglogue}
+            >
               <BodyCell size={"long"}>{item.name}</BodyCell>
               <BodyCell size={"long"}>{item.manufacturer}</BodyCell>
               <BodyCell size={"normal"}>{item.stockLevel}</BodyCell>
               <BodyCell size={"short"}>
-                <IconButton onClick={() => setShowConfirmDelete(id)}>
-                  <Icon path={mdiTrashCanOutline} />
+                <IconButton onClick={() => setShowDeleteDiaglogue(id)}>
+                  <Icon path={mdiTrashCanOutline} size={"1.6em"} />
+                </IconButton>
+                <IconButton onClick={() => setShowEditDialogue(id)}>
+                  <Icon path={mdiPencil} size={"1.6em"} />
                 </IconButton>
               </BodyCell>
             </Row>
           ))}
         </tbody>
       </MainTable>
-      <form onSubmit={handleSubmit(addItem)}>
-        <MainTable
-          css={`
-            border-top: 0 none;
-          `}
-        >
-          <tbody>
-            <Row>
-              <BodyCell size={"long"}>
-                <Input
-                  type={"text"}
-                  {...register("name", {
-                    required: true,
-                    validate: (value) => !!value.trim(),
-                  })}
-                  data-error={errors.name?.message}
-                />
-              </BodyCell>
-              <BodyCell size={"long"}>
-                <Input
-                  type={"text"}
-                  {...register("manufacturer", {
-                    required: true,
-                    validate: (value) => !!value.trim(),
-                  })}
-                  data-error={errors.manufacturer?.message}
-                />
-              </BodyCell>
-              <BodyCell size={"normal"}>
-                <Input
-                  type={"number"}
-                  {...register("stockLevel", {
-                    required: true,
-                    valueAsNumber: true,
-                  })}
-                  data-error={errors.stockLevel?.message}
-                />
-              </BodyCell>
-              <BodyCell size={"short"}>
-                <IconButton type={"submit"}>
-                  <Icon path={mdiPlus} />
-                </IconButton>
-              </BodyCell>
-            </Row>
-          </tbody>
-        </MainTable>
-      </form>
-      <ConfirmDeleteDialogue data-delete-id={showConfirmDelete}>
-        <ConfirmText>
-          Are You sure you want to delete{" "}
-          <strong>
-            {showConfirmDelete !== null && data[showConfirmDelete].name}
-          </strong>
-          ?
-        </ConfirmText>
-        <Options>
-          <ConfirmButton
-            onClick={() => confirmDelete(showConfirmDelete as number)}
-          >
-            <Icon path={mdiCheck} color={"red"} />
-            Yes
-          </ConfirmButton>
-          <CancelButton onClick={() => setShowConfirmDelete(null)}>
-            <Icon path={mdiClose} color={"green"} />
-            No
-          </CancelButton>
-        </Options>
-      </ConfirmDeleteDialogue>
+      <AddRow />
+      <DeleteDialogue
+        id={showDeleteDiaglogue}
+        onClose={() => setShowDeleteDiaglogue(undefined)}
+      />
+      <EditDialogue
+        id={showEditDialogue}
+        onClose={() => setShowEditDialogue(undefined)}
+      />
     </>
   );
 };
 export default Table;
 
-const MainTable = styled.table`
+export const MainTable = styled.table`
   width: 850px;
   max-width: 100vw;
   border-collapse: collapse;
 `;
 
-const Cell = styled.td<{ size?: "short" | "normal" | "long" }>`
+export const Cell = styled.td<{ size?: "short" | "normal" | "long" }>`
   padding: 15px;
   ${(p) => p.size === "long" && `width: 250px;`};
   ${(p) => p.size === "normal" && `width: 100px;`};
@@ -165,7 +108,7 @@ const HeadCell = styled(Cell).attrs({ as: "th" })`
   ${(p) => p.size === "short" && `text-align: center;`};
 `;
 
-const Row = styled.tr`
+export const Row = styled.tr`
   transition-property: filter, background-color;
   transition-timing-function: ease-out;
   transition-duration: 0.2s;
@@ -190,7 +133,7 @@ const Row = styled.tr`
   }
 `;
 
-const BodyCell = styled(Cell)`
+export const BodyCell = styled(Cell)`
   text-align: start;
   color: rgb(99, 99, 99);
   border: 1px solid rgb(221, 223, 225);
@@ -200,8 +143,12 @@ const BodyCell = styled(Cell)`
   }
 `;
 
-const GenericButton = styled.button``;
-const IconButton = styled(GenericButton)`
+const GenericButton = styled.button`
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+`;
+export const IconButton = styled(GenericButton)`
   border: 0 none;
   background-color: transparent;
   color: currentColor;
@@ -211,16 +158,17 @@ const IconButton = styled(GenericButton)`
   padding: 0;
 `;
 
-const ConfirmDeleteDialogue = styled.div`
+export const Dialogue = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: center;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 350px;
   max-width: 95vw;
-  height: 150px;
+  min-height: 100px;
   padding: 20px;
   border-radius: 4px;
   backdrop-filter: blur(3px);
@@ -230,43 +178,31 @@ const ConfirmDeleteDialogue = styled.div`
   border: 1px solid rgba(255, 255, 255, 0.8);
 
   @media (prefers-color-scheme: dark) {
-    background-color: rgba(25, 25, 25, 0.7);
-    border: 1px solid rgba(0, 0, 0, 0.8);
+    background-color: rgba(75, 75, 75, 0.7);
   }
-  transition: opacity 0.5s ease-out;
+  transition-property: opacity, filter;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-out;
   opacity: 0;
+  filter: blur(10px);
   pointer-events: none;
-  &[data-delete-id] {
+  &[data-id] {
     opacity: 1;
+    filter: blur(0);
     pointer-events: all;
   }
 `;
-const ConfirmText = styled.div`
-  user-select: none;
-  text-shadow: 0px 0px 2px white;
-`;
-const Options = styled.div`
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-`;
-const ConfirmButton = styled(GenericButton)`
-  display: flex;
-  flex-direction: row;
-`;
-const CancelButton = styled(GenericButton)`
-  display: flex;
-  flex-direction: row;
-`;
 
-const Input = styled.input`
+export const Input = styled.input.attrs({
+  autoComplete: "off",
+  "data-1pignore": "true",
+})`
   outline: 0 none;
   border-radius: 4px;
   padding: 5px;
   width: 100%;
 
   border: 1px solid rgba(100, 100, 100, 0.8);
-
   @media (prefers-color-scheme: dark) {
     border: 1px solid rgba(155, 155, 155, 0.8);
   }
