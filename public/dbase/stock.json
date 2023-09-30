@@ -1,22 +1,22 @@
 [
   {
-    "name": "test",
-    "manufacturer": "test",
-    "stockLevel": 1
-  },
-  {
-    "name": "something",
-    "manufacturer": "something",
+    "name": "Shirts",
+    "manufacturer": "Polo",
     "stockLevel": 50
   },
   {
-    "name": "!@£$!@£",
-    "manufacturer": "asdfasdf",
-    "stockLevel": 0
+    "name": "Socks",
+    "manufacturer": "Pringles",
+    "stockLevel": 25
   },
   {
-    "name": "asdf",
-    "manufacturer": "asdf",
-    "stockLevel": 0
+    "name": "Shoes",
+    "manufacturer": "Puma",
+    "stockLevel": 15
+  },
+  {
+    "name": "Shorts",
+    "manufacturer": "Pablo",
+    "stockLevel": 5
   }
 ]
