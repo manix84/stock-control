@@ -3,7 +3,7 @@ import { SubmitHandler, useForm } from "react-hook-form";
 import styled from "styled-components";
 import { StockItem } from "../../@types";
 import { stockContext } from "../../context/stock";
-import { Dialogue } from "../Table";
+import { Dialogue } from "./SharedComponents";
 
 export const EditDialogue = ({
   id,

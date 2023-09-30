@@ -4,7 +4,13 @@ import { useContext, useEffect } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { StockItem } from "../../@types";
 import { stockContext } from "../../context/stock";
-import { BodyCell, IconButton, Input, MainTable, Row } from "../Table";
+import {
+  BodyCell,
+  IconButton,
+  Input,
+  MainTable,
+  Row,
+} from "./SharedComponents";
 
 export const AddRow = () => {
   const { add, refresh, isLoaded } = useContext(stockContext);

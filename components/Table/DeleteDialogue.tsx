@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { styled } from "styled-components";
 import { stockContext } from "../../context/stock";
-import { Dialogue } from "../Table";
+import { Dialogue } from "./SharedComponents";
 
 export const DeleteDialogue = ({
   id,
