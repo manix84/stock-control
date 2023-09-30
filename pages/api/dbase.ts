@@ -8,7 +8,7 @@ import { NextApiRequest, NextApiResponse } from "next/types";
 import { StockItem, StockItems } from "../../@types";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const file = join(__dirname, "../../dbase/", "stock.json");
+const file = join(__dirname, "../../public/dbase/", "stock.json");
 
 const adapter = new JSONFile<StockItems>(file);
 const db = new Low<StockItems>(adapter, []);
