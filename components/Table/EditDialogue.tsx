@@ -134,6 +134,10 @@ const Label = styled.label`
   transition-timing-function: ease-out;
   text-shadow: -1px 1px 0 rgb(255, 255, 255), 1px 1px 0 rgb(255, 255, 255),
     1px -1px 0 rgb(255, 255, 255), -1px -1px 0 rgb(255, 255, 255);
+  @media (prefers-color-scheme: dark) {
+    text-shadow: -1px 1px 0 rgb(175, 175, 175), 1px 1px 0 rgb(175, 175, 175),
+      1px -1px 0 rgb(175, 175, 175), -1px -1px 0 rgb(175, 175, 175);
+  }
 
   transform: translateY(0);
   scale: 1;

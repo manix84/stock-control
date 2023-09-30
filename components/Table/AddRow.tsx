@@ -32,7 +32,6 @@ export const AddRow = () => {
           <Row>
             <BodyCell size={"long"}>
               <Input
-                required
                 type={"text"}
                 {...register("name", { required: true })}
                 data-error={errors.name?.message}
@@ -40,7 +39,6 @@ export const AddRow = () => {
             </BodyCell>
             <BodyCell size={"long"}>
               <Input
-                required
                 type={"text"}
                 {...register("manufacturer", { required: true })}
                 data-error={errors.manufacturer?.message}
@@ -48,7 +46,6 @@ export const AddRow = () => {
             </BodyCell>
             <BodyCell size={"normal"}>
               <Input
-                required
                 type={"number"}
                 {...register("stockLevel", {
                   required: true,
@@ -57,7 +54,12 @@ export const AddRow = () => {
                 data-error={errors.stockLevel?.message}
               />
             </BodyCell>
-            <BodyCell size={"short"}>
+            <BodyCell
+              size={"short"}
+              css={`
+                text-align: center;
+              `}
+            >
               <IconButton type={"submit"}>
                 <Icon path={mdiPlus} size={"1.6em"} />
               </IconButton>

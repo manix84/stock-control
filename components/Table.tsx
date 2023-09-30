@@ -54,11 +54,11 @@ const Table = ({ data }: { data: StockItems }) => {
               <BodyCell size={"long"}>{item.manufacturer}</BodyCell>
               <BodyCell size={"normal"}>{item.stockLevel}</BodyCell>
               <BodyCell size={"short"}>
-                <IconButton onClick={() => setShowDeleteDiaglogue(id)}>
-                  <Icon path={mdiTrashCanOutline} size={"1.6em"} />
-                </IconButton>
                 <IconButton onClick={() => setShowEditDialogue(id)}>
                   <Icon path={mdiPencil} size={"1.6em"} />
+                </IconButton>
+                <IconButton onClick={() => setShowDeleteDiaglogue(id)}>
+                  <Icon path={mdiTrashCanOutline} size={"1.6em"} />
                 </IconButton>
               </BodyCell>
             </Row>
@@ -89,7 +89,7 @@ export const Cell = styled.td<{ size?: "short" | "normal" | "long" }>`
   padding: 15px;
   ${(p) => p.size === "long" && `width: 250px;`};
   ${(p) => p.size === "normal" && `width: 100px;`};
-  ${(p) => p.size === "short" && `width: 50px;`};
+  ${(p) => p.size === "short" && `width: 75px;`};
 `;
 
 const HeadCell = styled(Cell).attrs({ as: "th" })`
@@ -152,8 +152,8 @@ export const IconButton = styled(GenericButton)`
   border: 0 none;
   background-color: transparent;
   color: currentColor;
-  height: 100%;
-  width: 100%;
+  height: 30px;
+  width: 30px;
   margin: 0;
   padding: 0;
 `;
