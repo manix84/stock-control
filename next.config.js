@@ -1,4 +1,6 @@
 const isGithubActions = process.env.GITHUB_ACTIONS || false;
+let assetPrefix = "",
+  basePath = "";
 if (isGithubActions) {
   // trim off `<owner>/`
   const repo = process.env.GITHUB_REPOSITORY.replace(/.*?\//, "");
