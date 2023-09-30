@@ -2,17 +2,17 @@
   {
     "name": "test",
     "manufacturer": "test",
-    "stockLevel": "1"
+    "stockLevel": 1
   },
   {
     "name": "something",
     "manufacturer": "something",
-    "stockLevel": "50"
+    "stockLevel": 50
   },
   {
     "name": "!@£$!@£",
     "manufacturer": "asdfasdf",
-    "stockLevel": "00"
+    "stockLevel": 0
   },
   {
     "name": "asdf",
