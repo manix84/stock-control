@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { StockItem, StockItems } from "../@types";
 
+const basePath = process.env.basePath || "";
+
 type StockContextProps = {
   stock: StockItems;
   add: ({ name, manufacturer, stockLevel }: StockItem) => Promise<Response>;
@@ -30,7 +32,7 @@ export const StockProvider = ({ children }: { children: React.ReactNode }) => {
   };
 
   const getStock = async (): Promise<StockItems> =>
-    fetch("/api/dbase", { method: "GET" }).then(
+    fetch(`${basePath}/api/dbase`, { method: "GET" }).then(
       async (response) => await response.json()
     );
 
@@ -44,7 +46,7 @@ export const StockProvider = ({ children }: { children: React.ReactNode }) => {
     manufacturer,
     stockLevel,
   }: StockItem): Promise<Response> =>
-    fetch("/api/dbase", {
+    fetch(`${basePath}/api/dbase`, {
       method: "PUT",
       headers,
       body: JSON.stringify({ name, manufacturer, stockLevel }),
@@ -54,14 +56,14 @@ export const StockProvider = ({ children }: { children: React.ReactNode }) => {
     id: number,
     { name, manufacturer, stockLevel }: StockItem
   ): Promise<Response> =>
-    fetch("/api/dbase", {
+    fetch(`${basePath}/api/dbase`, {
       method: "PUT",
       headers,
       body: JSON.stringify({ id, name, manufacturer, stockLevel }),
     });
 
   const remove = async (id: number): Promise<Response> =>
-    fetch("/api/dbase", {
+    fetch(`${basePath}/api/dbase`, {
       method: "DELETE",
       headers,
       body: JSON.stringify({ id }),

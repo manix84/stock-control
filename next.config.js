@@ -44,4 +44,7 @@ module.exports = {
   },
   assetPrefix,
   basePath,
+  env: {
+    basePath,
+  },
 };
