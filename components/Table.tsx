@@ -206,9 +206,12 @@ export const Input = styled.input.attrs({
   @media (prefers-color-scheme: dark) {
     border: 1px solid rgba(155, 155, 155, 0.8);
   }
-  transition: border-left-width 0.2s ease-in;
+  transition: border-left-width 0.2s ease-in-out;
   &[data-error] {
     border-left-width: 8px;
-    border-left-color: red;
+    border-left-color: rgb(255, 0, 0);
+    @media (prefers-color-scheme: dark) {
+      border-left-color: rgb(200, 0, 0);
+    }
   }
 `;
