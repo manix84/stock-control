@@ -19,8 +19,6 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
   const { id, name, manufacturer, stockLevel }: StockItem & { id?: number } =
     req.body;
 
-  console.log({ id, name, manufacturer, stockLevel, body: req.body });
-
   switch (req.method) {
     case "PUT": // Put Data
       if (!name || !manufacturer || isNaN(stockLevel) || stockLevel < 0) {
