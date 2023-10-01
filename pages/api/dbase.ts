@@ -36,8 +36,8 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     case "GET": // Get Data
       return res.status(200).json(dbase);
     case "DELETE":
-      if (!id) {
-        res
+      if (id === undefined) {
+        return res
           .status(400)
           .json({ success: false, error: "Missing data", error_id: 3 });
       }
