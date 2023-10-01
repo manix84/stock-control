@@ -41,6 +41,7 @@ export const DeleteDialogue = ({
     </Dialogue>
   );
 };
+export default DeleteDialogue;
 
 const ConfirmText = styled.div`
   user-select: none;

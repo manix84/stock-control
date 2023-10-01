@@ -16,7 +16,7 @@ import {
   Row,
 } from "./Table/SharedComponents";
 
-const Table = ({ data }: { data: StockItems }) => {
+export const Table = ({ data }: { data: StockItems }) => {
   const { edit, refresh } = useContext(stockContext);
 
   const [showDeleteDiaglogue, setShowDeleteDiaglogue] = useState<number>();

@@ -93,6 +93,8 @@ export const EditDialogue = ({
   );
 };
 
+export default EditDialogue;
+
 const Form = styled.form`
   display: flex;
   flex-direction: column;

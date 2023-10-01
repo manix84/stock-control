@@ -76,3 +76,4 @@ export const AddRow = () => {
     </form>
   );
 };
+export default AddRow;
