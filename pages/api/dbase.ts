@@ -18,13 +18,18 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
   let dbase = db.data;
   const { id, name, manufacturer, stockLevel }: StockItem & { id?: number } =
     req.body;
+  const missingData = [];
 
   switch (req.method) {
     case "PUT": // Put Data
-      if (!name || !manufacturer || isNaN(stockLevel) || stockLevel < 0) {
-        return res
-          .status(400)
-          .json({ success: false, error: "Missing data", error_id: 2 });
+      if (!name) missingData.push("name");
+      if (!manufacturer) missingData.push("manufacturer");
+      if (isNaN(stockLevel) || stockLevel < 0) missingData.push("stockLevel");
+
+      if (missingData.length > 0) {
+        return res.status(400).json({
+          error: `Missing data: ${missingData.join(", ")}`,
+        });
       }
       if (id !== undefined) {
         dbase[id] = { name, manufacturer, stockLevel };
@@ -32,18 +37,19 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
         dbase.push({ name, manufacturer, stockLevel });
       }
       await db.write();
-      return res.status(200).json({ success: true });
+      return res.status(200);
     case "GET": // Get Data
       return res.status(200).json(dbase);
     case "DELETE":
       if (id === undefined) {
-        return res
-          .status(400)
-          .json({ success: false, error: "Missing data", error_id: 3 });
+        return res.status(400).json({
+          error: `Missing data: id`,
+        });
       }
       dbase = dbase.splice(id as number, 1);
       await db.write();
-      return res.status(200).json(dbase);
+      return res.status(200);
     default:
+      return res.status(400).json({ error: "Invalid Request" });
   }
 };
