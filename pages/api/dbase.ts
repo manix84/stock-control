@@ -50,8 +50,8 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       await db.write();
       return res.status(200).json({});
     default:
-      return res.status(400).json({
-        error: "Invalid Request",
+      return res.status(405).json({
+        error: "Invalid request method",
       });
   }
 };
