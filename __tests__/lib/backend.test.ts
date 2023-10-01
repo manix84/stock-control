@@ -12,7 +12,6 @@ const mockDBase = [
   },
 ];
 const successResponseObj = { success: true };
-const failResponseObjBase = { success: false };
 
 describe("DBase", () => {
   afterAll(() => {
