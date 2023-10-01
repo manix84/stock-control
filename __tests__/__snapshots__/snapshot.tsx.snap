@@ -11,7 +11,7 @@ exports[`renders addRow components unchanged 1`] = `
         >
           <tbody>
             <tr
-              class="sc-jTQDJr faUJcl"
+              class="sc-jTQDJr bvqaGQ"
             >
               <td
                 class="sc-eDLKEg sc-gLLuHO gVlCde cRpsBe"
@@ -79,7 +79,7 @@ exports[`renders addRow components unchanged 1`] = `
       >
         <tbody>
           <tr
-            class="sc-jTQDJr faUJcl"
+            class="sc-jTQDJr bvqaGQ"
           >
             <td
               class="sc-eDLKEg sc-gLLuHO gVlCde cRpsBe"
@@ -403,7 +403,7 @@ exports[`renders editDialogue components unchanged 1`] = `
         data-id="0"
       >
         <form
-          class="sc-1d7ae2ca-0 dWJHpv"
+          class="sc-d528ac18-0 kVPguh"
         >
           <input
             name="id"
@@ -411,66 +411,66 @@ exports[`renders editDialogue components unchanged 1`] = `
             value="0"
           />
           <div
-            class="sc-1d7ae2ca-1 cEiquW"
+            class="sc-d528ac18-1 eKSHs"
           >
             <input
               autocomplete="off"
-              class="sc-1d7ae2ca-2 kKAoFJ"
+              class="sc-d528ac18-2 heKoRT"
               data-1pignore="true"
               name="name"
               required=""
               type="text"
             />
             <label
-              class="sc-1d7ae2ca-3 jELmMI"
+              class="sc-d528ac18-3 dnGdTi"
             >
               Name
             </label>
           </div>
           <div
-            class="sc-1d7ae2ca-1 cEiquW"
+            class="sc-d528ac18-1 eKSHs"
           >
             <input
               autocomplete="off"
-              class="sc-1d7ae2ca-2 kKAoFJ"
+              class="sc-d528ac18-2 heKoRT"
               data-1pignore="true"
               name="manufacturer"
               required=""
               type="text"
             />
             <label
-              class="sc-1d7ae2ca-3 jELmMI"
+              class="sc-d528ac18-3 dnGdTi"
             >
               Manufacturer
             </label>
           </div>
           <div
-            class="sc-1d7ae2ca-1 cEiquW"
+            class="sc-d528ac18-1 eKSHs"
           >
             <input
               autocomplete="off"
-              class="sc-1d7ae2ca-2 kKAoFJ"
+              class="sc-d528ac18-2 heKoRT"
               data-1pignore="true"
               name="stockLevel"
               required=""
               type="number"
             />
             <label
-              class="sc-1d7ae2ca-3 jELmMI"
+              class="sc-d528ac18-3 dnGdTi"
             >
               Stock Level
             </label>
           </div>
           <div
-            class="sc-1d7ae2ca-4 cWCuSE"
+            class="sc-d528ac18-4 ktRPXe"
           >
             <button
-              class="sc-1d7ae2ca-5 dQXobD"
+              class="sc-d528ac18-5 giNlZR"
             >
               Cancel
             </button>
             <button
-              class="sc-1d7ae2ca-5 sc-1d7ae2ca-6 dQXobD hZQzwN"
+              class="sc-d528ac18-5 sc-d528ac18-6 giNlZR kVQbHL"
               disabled=""
               type="submit"
             >
@@ -487,7 +487,7 @@ exports[`renders editDialogue components unchanged 1`] = `
       data-id="0"
     >
       <form
-        class="sc-1d7ae2ca-0 dWJHpv"
+        class="sc-d528ac18-0 kVPguh"
       >
         <input
           name="id"
@@ -495,66 +495,66 @@ exports[`renders editDialogue components unchanged 1`] = `
           value="0"
         />
         <div
-          class="sc-1d7ae2ca-1 cEiquW"
+          class="sc-d528ac18-1 eKSHs"
         >
           <input
             autocomplete="off"
-            class="sc-1d7ae2ca-2 kKAoFJ"
+            class="sc-d528ac18-2 heKoRT"
             data-1pignore="true"
             name="name"
             required=""
             type="text"
           />
           <label
-            class="sc-1d7ae2ca-3 jELmMI"
+            class="sc-d528ac18-3 dnGdTi"
           >
             Name
           </label>
         </div>
         <div
-          class="sc-1d7ae2ca-1 cEiquW"
+          class="sc-d528ac18-1 eKSHs"
         >
           <input
             autocomplete="off"
-            class="sc-1d7ae2ca-2 kKAoFJ"
+            class="sc-d528ac18-2 heKoRT"
             data-1pignore="true"
             name="manufacturer"
             required=""
             type="text"
           />
           <label
-            class="sc-1d7ae2ca-3 jELmMI"
+            class="sc-d528ac18-3 dnGdTi"
           >
             Manufacturer
           </label>
         </div>
         <div
-          class="sc-1d7ae2ca-1 cEiquW"
+          class="sc-d528ac18-1 eKSHs"
         >
           <input
             autocomplete="off"
-            class="sc-1d7ae2ca-2 kKAoFJ"
+            class="sc-d528ac18-2 heKoRT"
             data-1pignore="true"
             name="stockLevel"
             required=""
             type="number"
           />
           <label
-            class="sc-1d7ae2ca-3 jELmMI"
+            class="sc-d528ac18-3 dnGdTi"
           >
             Stock Level
           </label>
         </div>
         <div
-          class="sc-1d7ae2ca-4 cWCuSE"
+          class="sc-d528ac18-4 ktRPXe"
         >
           <button
-            class="sc-1d7ae2ca-5 dQXobD"
+            class="sc-d528ac18-5 giNlZR"
           >
             Cancel
           </button>
           <button
-            class="sc-1d7ae2ca-5 sc-1d7ae2ca-6 dQXobD hZQzwN"
+            class="sc-d528ac18-5 sc-d528ac18-6 giNlZR kVQbHL"
             disabled=""
             type="submit"
           >
@@ -733,7 +733,7 @@ exports[`renders shared components unchanged 1`] = `
       >
         <tbody>
           <tr
-            class="sc-jTQDJr faUJcl"
+            class="sc-jTQDJr bvqaGQ"
           >
             <td
               class="sc-eDLKEg eQzojK"
@@ -751,7 +751,7 @@ exports[`renders shared components unchanged 1`] = `
     >
       <tbody>
         <tr
-          class="sc-jTQDJr faUJcl"
+          class="sc-jTQDJr bvqaGQ"
         >
           <td
             class="sc-eDLKEg eQzojK"
@@ -826,7 +826,7 @@ exports[`renders shared components unchanged 2`] = `
       >
         <tbody>
           <tr
-            class="sc-jTQDJr faUJcl"
+            class="sc-jTQDJr bvqaGQ"
           >
             <td
               class="sc-eDLKEg eQzojK"
@@ -843,7 +843,7 @@ exports[`renders shared components unchanged 2`] = `
       >
         <tbody>
           <tr
-            class="sc-jTQDJr faUJcl"
+            class="sc-jTQDJr bvqaGQ"
           >
             <td
               class="sc-eDLKEg sc-gLLuHO eQzojK cRpsBe"
@@ -861,7 +861,7 @@ exports[`renders shared components unchanged 2`] = `
     >
       <tbody>
         <tr
-          class="sc-jTQDJr faUJcl"
+          class="sc-jTQDJr bvqaGQ"
         >
           <td
             class="sc-eDLKEg sc-gLLuHO eQzojK cRpsBe"
@@ -936,7 +936,7 @@ exports[`renders shared components unchanged 3`] = `
       >
         <tbody>
           <tr
-            class="sc-jTQDJr faUJcl"
+            class="sc-jTQDJr bvqaGQ"
           >
             <td
               class="sc-eDLKEg eQzojK"
@@ -953,7 +953,7 @@ exports[`renders shared components unchanged 3`] = `
       >
         <tbody>
           <tr
-            class="sc-jTQDJr faUJcl"
+            class="sc-jTQDJr bvqaGQ"
           >
             <td
               class="sc-eDLKEg sc-gLLuHO eQzojK cRpsBe"
@@ -1039,7 +1039,7 @@ exports[`renders shared components unchanged 4`] = `
       >
         <tbody>
           <tr
-            class="sc-jTQDJr faUJcl"
+            class="sc-jTQDJr bvqaGQ"
           >
             <td
               class="sc-eDLKEg eQzojK"
@@ -1056,7 +1056,7 @@ exports[`renders shared components unchanged 4`] = `
       >
         <tbody>
           <tr
-            class="sc-jTQDJr faUJcl"
+            class="sc-jTQDJr bvqaGQ"
           >
             <td
               class="sc-eDLKEg sc-gLLuHO eQzojK cRpsBe"
@@ -1147,7 +1147,7 @@ exports[`renders shared components unchanged 5`] = `
       >
         <tbody>
           <tr
-            class="sc-jTQDJr faUJcl"
+            class="sc-jTQDJr bvqaGQ"
           >
             <td
               class="sc-eDLKEg eQzojK"
@@ -1164,7 +1164,7 @@ exports[`renders shared components unchanged 5`] = `
       >
         <tbody>
           <tr
-            class="sc-jTQDJr faUJcl"
+            class="sc-jTQDJr bvqaGQ"
           >
             <td
               class="sc-eDLKEg sc-gLLuHO eQzojK cRpsBe"
@@ -1367,9 +1367,10 @@ exports[`renders table components unchanged 1`] = `
         </thead>
         <tbody>
           <tr
-            class="sc-jTQDJr faUJcl"
+            class="sc-jTQDJr bvqaGQ"
             data-id="0"
             data-pending-delete="false"
+            data-pending-edit="false"
           >
             <td
               class="sc-eDLKEg sc-gLLuHO gVlCde cRpsBe"
@@ -1427,7 +1428,7 @@ exports[`renders table components unchanged 1`] = `
         >
           <tbody>
             <tr
-              class="sc-jTQDJr faUJcl"
+              class="sc-jTQDJr bvqaGQ"
             >
               <td
                 class="sc-eDLKEg sc-gLLuHO gVlCde cRpsBe"
@@ -1486,112 +1487,6 @@ exports[`renders table components unchanged 1`] = `
           </tbody>
         </table>
       </form>
-      <div
-        class="sc-qZruQ hrayws"
-      >
-        <div
-          class="sc-kFCrIq eokhSx"
-        >
-          Are you sure you want to delete
-           
-          <strong />
-          ?
-        </div>
-        <div
-          class="sc-irLvoH fQouRw"
-        >
-          <button
-            class="sc-csKJRI sc-eTNxZ eYFWbh geTghn"
-          >
-            Yes
-          </button>
-          <button
-            class="sc-csKJRI eYFWbh"
-          >
-            No
-          </button>
-        </div>
-      </div>
-      <div
-        class="sc-qZruQ hrayws"
-      >
-        <form
-          class="sc-1d7ae2ca-0 dWJHpv"
-        >
-          <input
-            name="id"
-            type="hidden"
-            value=""
-          />
-          <div
-            class="sc-1d7ae2ca-1 cEiquW"
-          >
-            <input
-              autocomplete="off"
-              class="sc-1d7ae2ca-2 kKAoFJ"
-              data-1pignore="true"
-              name="name"
-              required=""
-              type="text"
-            />
-            <label
-              class="sc-1d7ae2ca-3 jELmMI"
-            >
-              Name
-            </label>
-          </div>
-          <div
-            class="sc-1d7ae2ca-1 cEiquW"
-          >
-            <input
-              autocomplete="off"
-              class="sc-1d7ae2ca-2 kKAoFJ"
-              data-1pignore="true"
-              name="manufacturer"
-              required=""
-              type="text"
-            />
-            <label
-              class="sc-1d7ae2ca-3 jELmMI"
-            >
-              Manufacturer
-            </label>
-          </div>
-          <div
-            class="sc-1d7ae2ca-1 cEiquW"
-          >
-            <input
-              autocomplete="off"
-              class="sc-1d7ae2ca-2 kKAoFJ"
-              data-1pignore="true"
-              name="stockLevel"
-              required=""
-              type="number"
-            />
-            <label
-              class="sc-1d7ae2ca-3 jELmMI"
-            >
-              Stock Level
-            </label>
-          </div>
-          <div
-            class="sc-1d7ae2ca-4 cWCuSE"
-          >
-            <button
-              class="sc-1d7ae2ca-5 dQXobD"
-            >
-              Cancel
-            </button>
-            <button
-              class="sc-1d7ae2ca-5 sc-1d7ae2ca-6 dQXobD hZQzwN"
-              disabled=""
-              type="submit"
-            >
-              Save
-            </button>
-          </div>
-        </form>
-      </div>
     </div>
   </body>,
   "container": <div>
@@ -1624,9 +1519,10 @@ exports[`renders table components unchanged 1`] = `
       </thead>
       <tbody>
         <tr
-          class="sc-jTQDJr faUJcl"
+          class="sc-jTQDJr bvqaGQ"
           data-id="0"
           data-pending-delete="false"
+          data-pending-edit="false"
         >
           <td
             class="sc-eDLKEg sc-gLLuHO gVlCde cRpsBe"
@@ -1684,7 +1580,7 @@ exports[`renders table components unchanged 1`] = `
       >
         <tbody>
           <tr
-            class="sc-jTQDJr faUJcl"
+            class="sc-jTQDJr bvqaGQ"
           >
             <td
               class="sc-eDLKEg sc-gLLuHO gVlCde cRpsBe"
@@ -1743,112 +1639,6 @@ exports[`renders table components unchanged 1`] = `
         </tbody>
       </table>
     </form>
-    <div
-      class="sc-qZruQ hrayws"
-    >
-      <div
-        class="sc-kFCrIq eokhSx"
-      >
-        Are you sure you want to delete
-         
-        <strong />
-        ?
-      </div>
-      <div
-        class="sc-irLvoH fQouRw"
-      >
-        <button
-          class="sc-csKJRI sc-eTNxZ eYFWbh geTghn"
-        >
-          Yes
-        </button>
-        <button
-          class="sc-csKJRI eYFWbh"
-        >
-          No
-        </button>
-      </div>
-    </div>
-    <div
-      class="sc-qZruQ hrayws"
-    >
-      <form
-        class="sc-1d7ae2ca-0 dWJHpv"
-      >
-        <input
-          name="id"
-          type="hidden"
-          value=""
-        />
-        <div
-          class="sc-1d7ae2ca-1 cEiquW"
-        >
-          <input
-            autocomplete="off"
-            class="sc-1d7ae2ca-2 kKAoFJ"
-            data-1pignore="true"
-            name="name"
-            required=""
-            type="text"
-          />
-          <label
-            class="sc-1d7ae2ca-3 jELmMI"
-          >
-            Name
-          </label>
-        </div>
-        <div
-          class="sc-1d7ae2ca-1 cEiquW"
-        >
-          <input
-            autocomplete="off"
-            class="sc-1d7ae2ca-2 kKAoFJ"
-            data-1pignore="true"
-            name="manufacturer"
-            required=""
-            type="text"
-          />
-          <label
-            class="sc-1d7ae2ca-3 jELmMI"
-          >
-            Manufacturer
-          </label>
-        </div>
-        <div
-          class="sc-1d7ae2ca-1 cEiquW"
-        >
-          <input
-            autocomplete="off"
-            class="sc-1d7ae2ca-2 kKAoFJ"
-            data-1pignore="true"
-            name="stockLevel"
-            required=""
-            type="number"
-          />
-          <label
-            class="sc-1d7ae2ca-3 jELmMI"
-          >
-            Stock Level
-          </label>
-        </div>
-        <div
-          class="sc-1d7ae2ca-4 cWCuSE"
-        >
-          <button
-            class="sc-1d7ae2ca-5 dQXobD"
-          >
-            Cancel
-          </button>
-          <button
-            class="sc-1d7ae2ca-5 sc-1d7ae2ca-6 dQXobD hZQzwN"
-            disabled=""
-            type="submit"
-          >
-            Save
-          </button>
-        </div>
-      </form>
-    </div>
   </div>,
   "debug": [Function],
   "findAllByAltText": [Function],
