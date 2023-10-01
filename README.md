@@ -1,6 +1,6 @@
 # stock-control [![Deploy](https://github.com/manix84/stock-control/actions/workflows/pages.yml/badge.svg)](https://github.com/manix84/stock-control/actions/workflows/pages.yml)
 
-This is a technical test, written in a little over 10 hours (broken up my housework), so some of it might be a little rushed compared to my normal work. If you've any questions, feel free to contact me.
+This is a technical test, written in a little over 10 hours (broken up by housework), so some of it might be a little rushed compared to my normal work. If you've any questions, feel free to contact me.
 
 ## Basic Setup
 
@@ -55,5 +55,5 @@ If you're really curious, you can see it at https://manix84.github.io/stock-cont
     > Tables are out of date when it comes to page structure and layouts, but they have their place. Namely; tabular data. If you've got a database table to display, the best tool is a table. I think it looks nice and pretty.
   - Material Design Icons (or MDI)
     > Great little icons, originally developed by Google, but open source, and super handy.
-  - Adding from a Row vs Editing in a Modal:
+  - Adding from a Row vs Editing in a Modal
     > I wanted to show a couple of ways of adding data from a table. Semantically, it wasn't that easy, as a `form` isn't allowed inside any of the table elements except `td`, so my solution was a visual trick, creating a flush table & form to act like they're a single table.
