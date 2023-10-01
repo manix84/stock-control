@@ -1,10 +1,8 @@
 import { mdiPencil, mdiTrashCanOutline } from "@mdi/js";
 import Icon from "@mdi/react";
-import { useContext, useEffect, useState } from "react";
-import { SubmitHandler, useForm } from "react-hook-form";
+import { useEffect, useState } from "react";
 import { styled } from "styled-components";
 import { StockItem, StockItems } from "../@types";
-import { stockContext } from "../context/stock";
 import { AddRow } from "./Table/AddRow";
 import { DeleteDialogue } from "./Table/DeleteDialogue";
 import { EditDialogue } from "./Table/EditDialogue";
@@ -17,27 +15,31 @@ import {
 } from "./Table/SharedComponents";
 
 export const Table = ({ data }: { data: StockItems }) => {
-  const { edit, refresh } = useContext(stockContext);
-
-  const [showDeleteDiaglogue, setShowDeleteDiaglogue] = useState<number>();
-  const [showEditDialogue, setShowEditDialogue] = useState<number>();
-
-  const {
-    register,
-    handleSubmit,
-    reset,
-    formState: { errors, isLoading, isSubmitSuccessful },
-  } = useForm<StockItem & { id?: number }>();
-
-  const editItem: SubmitHandler<StockItem & { id?: number }> = (data) =>
-    edit(data.id as number, data);
+  const [showDeleteDialogue, setShowDeleteDialogue] = useState<boolean>(false);
+  const [deleteDialogueId, setDeleteDialogueId] = useState<number>();
+  const [showEditDialogue, setShowEditDialogue] = useState<boolean>(false);
+  const [editDialogueId, setEditDialogueId] = useState<number>();
 
   useEffect(() => {
-    if (isSubmitSuccessful) {
-      refresh();
-      reset();
+    if (deleteDialogueId === undefined) {
+      setTimeout(() => {
+        setShowDeleteDialogue(false);
+      }, 500);
+    } else {
+      setShowDeleteDialogue(true);
+      setShowEditDialogue(false);
+      setEditDialogueId(undefined);
     }
-  }, [isSubmitSuccessful]);
+    if (editDialogueId === undefined) {
+      setTimeout(() => {
+        setShowEditDialogue(false);
+      }, 500);
+    } else {
+      setShowEditDialogue(true);
+      setShowDeleteDialogue(false);
+      setDeleteDialogueId(undefined);
+    }
+  }, [deleteDialogueId, editDialogueId]);
 
   return (
     <>
@@ -55,16 +57,17 @@ export const Table = ({ data }: { data: StockItems }) => {
             <Row
               key={`stock_row_${id}`}
               data-id={id}
-              data-pending-delete={id === showDeleteDiaglogue}
+              data-pending-delete={id === deleteDialogueId}
+              data-pending-edit={id === editDialogueId}
             >
               <BodyCell size={"long"}>{item.name}</BodyCell>
               <BodyCell size={"long"}>{item.manufacturer}</BodyCell>
               <BodyCell size={"normal"}>{item.stockLevel}</BodyCell>
               <BodyCell size={"short"}>
-                <IconButton onClick={() => setShowEditDialogue(id)}>
+                <IconButton onClick={() => setEditDialogueId(id)}>
                   <Icon path={mdiPencil} size={"1.6em"} />
                 </IconButton>
-                <IconButton onClick={() => setShowDeleteDiaglogue(id)}>
+                <IconButton onClick={() => setDeleteDialogueId(id)}>
                   <Icon path={mdiTrashCanOutline} size={"1.6em"} />
                 </IconButton>
               </BodyCell>
@@ -73,14 +76,18 @@ export const Table = ({ data }: { data: StockItems }) => {
         </tbody>
       </MainTable>
       <AddRow />
-      <DeleteDialogue
-        id={showDeleteDiaglogue}
-        onClose={() => setShowDeleteDiaglogue(undefined)}
-      />
-      <EditDialogue
-        id={showEditDialogue}
-        onClose={() => setShowEditDialogue(undefined)}
-      />
+      {showDeleteDialogue && (
+        <DeleteDialogue
+          id={deleteDialogueId}
+          onClose={() => setDeleteDialogueId(undefined)}
+        />
+      )}
+      {showEditDialogue && (
+        <EditDialogue
+          id={editDialogueId}
+          onClose={() => setEditDialogueId(undefined)}
+        />
+      )}
     </>
   );
 };

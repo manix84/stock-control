@@ -14,7 +14,7 @@ export const EditDialogue = ({
 }) => {
   const { stock, edit, refresh } = useContext(stockContext);
 
-  const [selectedId, setSelectedId] = useState<number>();
+  const [selectedId, setSelectedId] = useState<number>(-1);
 
   useEffect(() => {
     if (id !== undefined) setSelectedId(id);
@@ -26,11 +26,11 @@ export const EditDialogue = ({
     setError,
     reset,
     formState: { errors, isSubmitSuccessful, isDirty },
-  } = useForm<StockItem & { id?: number }>({
+  } = useForm<StockItem & { id: number }>({
     values: { ...stock[selectedId as number], id: selectedId },
   });
 
-  const editItem: SubmitHandler<StockItem & { id?: number }> = (data) =>
+  const editItem: SubmitHandler<StockItem & { id: number }> = (data) =>
     edit(data.id as number, data).catch((err) =>
       setError("root.serverError", { message: err })
     );
@@ -51,7 +51,7 @@ export const EditDialogue = ({
           {...register("id", {
             valueAsNumber: true,
           })}
-          value={id as number}
+          value={selectedId as number}
         />
         <InputContainer>
           <Input

@@ -39,6 +39,12 @@ export const Row = styled.tr`
   &[data-pending-delete="true"] {
     filter: blur(2px);
   }
+  &[data-pending-edit="true"] {
+    background-color: rgb(225, 249, 225);
+    @media (prefers-color-scheme: dark) {
+      background-color: rgb(10, 30, 75);
+    }
+  }
 `;
 
 export const BodyCell = styled(Cell)`
