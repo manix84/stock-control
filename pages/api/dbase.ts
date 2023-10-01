@@ -37,7 +37,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
         dbase.push({ name, manufacturer, stockLevel });
       }
       await db.write();
-      return res.status(200);
+      return res.status(200).json({});
     case "GET": // Get Data
       return res.status(200).json(dbase);
     case "DELETE":
@@ -48,8 +48,10 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       }
       dbase = dbase.splice(id as number, 1);
       await db.write();
-      return res.status(200);
+      return res.status(200).json({});
     default:
-      return res.status(400).json({ error: "Invalid Request" });
+      return res.status(400).json({
+        error: "Invalid Request",
+      });
   }
 };
