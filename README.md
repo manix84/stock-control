@@ -1,16 +1,30 @@
 # stock-control [![Deploy](https://github.com/manix84/stock-control/actions/workflows/pages.yml/badge.svg)](https://github.com/manix84/stock-control/actions/workflows/pages.yml)
 
-## Setup
+## Basic Setup
 
 - Clone repo: `git clone https://github.com/manix84/stock-control.git`
 - Install dependencies: `npm i`
-- Dev Mode:
-  - Run `npm run dev`
-  - Open http://localhost:3000
-- Prod Mode:
-  - run `npm run build`
-  - run `npm run start`
-  - Open http://localhost:3000
+
+### Development
+
+- Run `npm run dev`
+- Open http://localhost:3000
+
+### Production
+
+- Run `npm run build`
+- Run `npm run start`
+- Open http://localhost:3000
+
+## Testing
+
+### Watch
+
+- Run `jest --watch`
+
+### Single Run
+
+- Run `jest --ci`
 
 ## Notes
 
