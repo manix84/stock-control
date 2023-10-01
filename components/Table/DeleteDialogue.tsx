@@ -12,6 +12,7 @@ export const DeleteDialogue = ({
 }) => {
   const { stock, remove, refresh } = useContext(stockContext);
   const [selectedId, setSelectedId] = useState<number>();
+  const [error, setError] = useState<string>();
 
   useEffect(() => {
     if (id !== undefined) setSelectedId(id);
@@ -23,13 +24,13 @@ export const DeleteDialogue = ({
         onClose();
         refresh();
       })
-      .catch((err) => console.log(err));
+      .catch((err) => setError(err));
   };
 
   return (
-    <Dialogue data-id={id}>
+    <Dialogue data-id={id} data-error={error}>
       <ConfirmText>
-        Are You sure you want to delete{" "}
+        Are you sure you want to delete{" "}
         <strong>{id !== null && stock[selectedId as number]?.name}</strong>?
       </ConfirmText>
       <Options>

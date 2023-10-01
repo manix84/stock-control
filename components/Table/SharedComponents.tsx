@@ -29,12 +29,15 @@ export const Row = styled.tr`
     }
   }
   filter: blur(0px);
-  &[data-pending-delete="true"] {
+  &[data-pending-delete="true"],
+  &[data-error] {
     background-color: rgb(249, 225, 225);
     @media (prefers-color-scheme: dark) {
       background-color: rgb(50, 4, 4);
     }
-    filter: blur(1px);
+  }
+  &[data-pending-delete="true"] {
+    filter: blur(2px);
   }
 `;
 
@@ -52,6 +55,9 @@ const GenericButton = styled.button`
   font-weight: 700;
   font-size: 16px;
   cursor: pointer;
+  &:disabled {
+    cursor: not-allowed;
+  }
 `;
 export const IconButton = styled(GenericButton)`
   border: 0 none;
@@ -95,6 +101,9 @@ export const Dialogue = styled.div`
     opacity: 1;
     filter: blur(0);
     pointer-events: all;
+  }
+  &[data-error] {
+    background-color: rgba(150, 75, 75, 0.7);
   }
 `;
 

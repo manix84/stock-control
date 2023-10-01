@@ -23,14 +23,17 @@ export const EditDialogue = ({
   const {
     register,
     handleSubmit,
+    setError,
     reset,
-    formState: { errors, isSubmitSuccessful },
+    formState: { errors, isSubmitSuccessful, isDirty },
   } = useForm<StockItem & { id?: number }>({
     values: { ...stock[selectedId as number], id: selectedId },
   });
 
   const editItem: SubmitHandler<StockItem & { id?: number }> = (data) =>
-    edit(data.id as number, data);
+    edit(data.id as number, data).catch((err) =>
+      setError("root.serverError", { message: err })
+    );
 
   useEffect(() => {
     if (isSubmitSuccessful) {
@@ -41,7 +44,7 @@ export const EditDialogue = ({
   }, [isSubmitSuccessful]);
 
   return (
-    <Dialogue data-id={id}>
+    <Dialogue data-id={id} data-error={errors?.root?.serverError.message}>
       <Form onSubmit={handleSubmit(editItem)}>
         <input
           type={"hidden"}
@@ -79,6 +82,7 @@ export const EditDialogue = ({
             {...register("stockLevel", {
               required: true,
               valueAsNumber: true,
+              min: 0,
             })}
             data-error={errors.stockLevel?.message}
           />
@@ -86,7 +90,9 @@ export const EditDialogue = ({
         </InputContainer>
         <ButtonContainer>
           <CancelButton onClick={onClose}>Cancel</CancelButton>
-          <SaveButton type={"submit"}>Save</SaveButton>
+          <SaveButton type={"submit"} disabled={!isDirty}>
+            Save
+          </SaveButton>
         </ButtonContainer>
       </Form>
     </Dialogue>

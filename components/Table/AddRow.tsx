@@ -13,16 +13,18 @@ import {
 } from "./SharedComponents";
 
 export const AddRow = () => {
-  const { add, refresh, isLoaded } = useContext(stockContext);
+  const { add, refresh } = useContext(stockContext);
 
   const {
     register,
     handleSubmit,
+    setError,
     reset,
-    formState: { errors, isSubmitSuccessful },
+    formState: { errors, isSubmitSuccessful, isDirty },
   } = useForm<StockItem & { id?: number }>();
 
-  const addItem: SubmitHandler<StockItem> = (data) => add(data);
+  const addItem: SubmitHandler<StockItem> = async (data) =>
+    add(data).catch((err) => setError("root.serverError", { message: err }));
 
   useEffect(() => {
     if (isSubmitSuccessful) {
@@ -35,7 +37,7 @@ export const AddRow = () => {
     <form onSubmit={handleSubmit(addItem)}>
       <MainTable>
         <tbody>
-          <Row>
+          <Row data-error={errors?.root?.serverError.message}>
             <BodyCell size={"long"}>
               <Input
                 type={"text"}
@@ -56,6 +58,7 @@ export const AddRow = () => {
                 {...register("stockLevel", {
                   required: true,
                   valueAsNumber: true,
+                  min: 0,
                 })}
                 data-error={errors.stockLevel?.message}
               />
@@ -66,7 +69,7 @@ export const AddRow = () => {
                 text-align: center;
               `}
             >
-              <IconButton type={"submit"}>
+              <IconButton type={"submit"} disabled={!isDirty}>
                 <Icon path={mdiPlus} size={"1.6em"} />
               </IconButton>
             </BodyCell>

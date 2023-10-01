@@ -6,8 +6,21 @@ const headers = {
   "Content-Type": "application/json",
 };
 
+export const request = (
+  url: RequestInfo | URL,
+  options?: RequestInit
+): Promise<Response> =>
+  fetch(typeof url === "string" ? `${basePath}${url}` : url, options).then(
+    (response) => {
+      if (response.ok) {
+        return response;
+      }
+      throw new Error(`[${response.status}] ${response.statusText}`);
+    }
+  );
+
 export const get = async (): Promise<StockItems> =>
-  fetch(`${basePath}/api/dbase`, { method: "GET" }).then(
+  request(`/api/dbase`, { method: "GET" }).then(
     async (response) => await response.json()
   );
 
@@ -16,25 +29,25 @@ export const add = ({
   manufacturer,
   stockLevel,
 }: StockItem): Promise<Response> =>
-  fetch(`${basePath}/api/dbase`, {
+  request(`/api/dbase`, {
     method: "PUT",
     headers,
     body: JSON.stringify({ name, manufacturer, stockLevel }),
-  });
+  }).then(async (response) => await response.json());
 
 export const edit = async (
   id: number,
   { name, manufacturer, stockLevel }: StockItem
 ): Promise<Response> =>
-  fetch(`${basePath}/api/dbase`, {
+  request(`/api/dbase`, {
     method: "PUT",
     headers,
     body: JSON.stringify({ id, name, manufacturer, stockLevel }),
-  });
+  }).then(async (response) => await response.json());
 
 export const remove = async (id: number): Promise<Response> =>
-  fetch(`${basePath}/api/dbase`, {
+  request(`/api/dbase`, {
     method: "DELETE",
     headers,
     body: JSON.stringify({ id }),
-  });
+  }).then(async (response) => await response.json());

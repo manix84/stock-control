@@ -11,7 +11,7 @@ exports[`renders addRow components unchanged 1`] = `
         >
           <tbody>
             <tr
-              class="sc-jTQDJr dqYucq"
+              class="sc-jTQDJr faUJcl"
             >
               <td
                 class="sc-eDLKEg sc-gLLuHO gVlCde cRpsBe"
@@ -47,10 +47,11 @@ exports[`renders addRow components unchanged 1`] = `
                 />
               </td>
               <td
-                class="sc-eDLKEg sc-gLLuHO sc-914594a7-0 bgfuxj cRpsBe MCuAw"
+                class="sc-eDLKEg sc-gLLuHO sc-590c3d-0 bgfuxj cRpsBe bEAkWe"
               >
                 <button
-                  class="sc-iBdoyZ sc-fsYfxw dhPZzK cTCBIB"
+                  class="sc-iBdoyZ sc-fsYfxw coKrmd cTCBIB"
+                  disabled=""
                   type="submit"
                 >
                   <svg
@@ -78,7 +79,7 @@ exports[`renders addRow components unchanged 1`] = `
       >
         <tbody>
           <tr
-            class="sc-jTQDJr dqYucq"
+            class="sc-jTQDJr faUJcl"
           >
             <td
               class="sc-eDLKEg sc-gLLuHO gVlCde cRpsBe"
@@ -114,10 +115,11 @@ exports[`renders addRow components unchanged 1`] = `
               />
             </td>
             <td
-              class="sc-eDLKEg sc-gLLuHO sc-914594a7-0 bgfuxj cRpsBe MCuAw"
+              class="sc-eDLKEg sc-gLLuHO sc-590c3d-0 bgfuxj cRpsBe bEAkWe"
             >
               <button
-                class="sc-iBdoyZ sc-fsYfxw dhPZzK cTCBIB"
+                class="sc-iBdoyZ sc-fsYfxw coKrmd cTCBIB"
+                disabled=""
                 type="submit"
               >
                 <svg
@@ -280,13 +282,13 @@ exports[`renders deleteDialogue components unchanged 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="sc-qZruQ fwKsVo"
+        class="sc-qZruQ hrayws"
         data-id="0"
       >
         <div
           class="sc-kFCrIq eokhSx"
         >
-          Are You sure you want to delete
+          Are you sure you want to delete
            
           <strong />
           ?
@@ -310,13 +312,13 @@ exports[`renders deleteDialogue components unchanged 1`] = `
   </body>,
   "container": <div>
     <div
-      class="sc-qZruQ fwKsVo"
+      class="sc-qZruQ hrayws"
       data-id="0"
     >
       <div
         class="sc-kFCrIq eokhSx"
       >
-        Are You sure you want to delete
+        Are you sure you want to delete
          
         <strong />
         ?
@@ -397,11 +399,11 @@ exports[`renders editDialogue components unchanged 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="sc-qZruQ fwKsVo"
+        class="sc-qZruQ hrayws"
         data-id="0"
       >
         <form
-          class="sc-dcabf394-0 kVgRUZ"
+          class="sc-1d7ae2ca-0 dWJHpv"
         >
           <input
             name="id"
@@ -409,66 +411,67 @@ exports[`renders editDialogue components unchanged 1`] = `
             value="0"
           />
           <div
-            class="sc-dcabf394-1 jmeQUs"
+            class="sc-1d7ae2ca-1 cEiquW"
           >
             <input
               autocomplete="off"
-              class="sc-dcabf394-2 bEpeET"
+              class="sc-1d7ae2ca-2 kKAoFJ"
               data-1pignore="true"
               name="name"
               required=""
               type="text"
             />
             <label
-              class="sc-dcabf394-3 kZlyhK"
+              class="sc-1d7ae2ca-3 jELmMI"
             >
               Name
             </label>
           </div>
           <div
-            class="sc-dcabf394-1 jmeQUs"
+            class="sc-1d7ae2ca-1 cEiquW"
           >
             <input
               autocomplete="off"
-              class="sc-dcabf394-2 bEpeET"
+              class="sc-1d7ae2ca-2 kKAoFJ"
               data-1pignore="true"
               name="manufacturer"
               required=""
               type="text"
             />
             <label
-              class="sc-dcabf394-3 kZlyhK"
+              class="sc-1d7ae2ca-3 jELmMI"
             >
               Manufacturer
             </label>
           </div>
           <div
-            class="sc-dcabf394-1 jmeQUs"
+            class="sc-1d7ae2ca-1 cEiquW"
           >
             <input
               autocomplete="off"
-              class="sc-dcabf394-2 bEpeET"
+              class="sc-1d7ae2ca-2 kKAoFJ"
               data-1pignore="true"
               name="stockLevel"
               required=""
               type="number"
             />
             <label
-              class="sc-dcabf394-3 kZlyhK"
+              class="sc-1d7ae2ca-3 jELmMI"
             >
               Stock Level
             </label>
           </div>
           <div
-            class="sc-dcabf394-4 htoXsm"
+            class="sc-1d7ae2ca-4 cWCuSE"
           >
             <button
-              class="sc-dcabf394-5 dMSBYJ"
+              class="sc-1d7ae2ca-5 dQXobD"
             >
               Cancel
             </button>
             <button
-              class="sc-dcabf394-5 sc-dcabf394-6 dMSBYJ bMZmgT"
+              class="sc-1d7ae2ca-5 sc-1d7ae2ca-6 dQXobD hZQzwN"
+              disabled=""
               type="submit"
             >
               Save
@@ -480,11 +483,11 @@ exports[`renders editDialogue components unchanged 1`] = `
   </body>,
   "container": <div>
     <div
-      class="sc-qZruQ fwKsVo"
+      class="sc-qZruQ hrayws"
       data-id="0"
     >
       <form
-        class="sc-dcabf394-0 kVgRUZ"
+        class="sc-1d7ae2ca-0 dWJHpv"
       >
         <input
           name="id"
@@ -492,66 +495,67 @@ exports[`renders editDialogue components unchanged 1`] = `
           value="0"
         />
         <div
-          class="sc-dcabf394-1 jmeQUs"
+          class="sc-1d7ae2ca-1 cEiquW"
         >
           <input
             autocomplete="off"
-            class="sc-dcabf394-2 bEpeET"
+            class="sc-1d7ae2ca-2 kKAoFJ"
             data-1pignore="true"
             name="name"
             required=""
             type="text"
           />
           <label
-            class="sc-dcabf394-3 kZlyhK"
+            class="sc-1d7ae2ca-3 jELmMI"
           >
             Name
           </label>
         </div>
         <div
-          class="sc-dcabf394-1 jmeQUs"
+          class="sc-1d7ae2ca-1 cEiquW"
         >
           <input
             autocomplete="off"
-            class="sc-dcabf394-2 bEpeET"
+            class="sc-1d7ae2ca-2 kKAoFJ"
             data-1pignore="true"
             name="manufacturer"
             required=""
             type="text"
           />
           <label
-            class="sc-dcabf394-3 kZlyhK"
+            class="sc-1d7ae2ca-3 jELmMI"
           >
             Manufacturer
           </label>
         </div>
         <div
-          class="sc-dcabf394-1 jmeQUs"
+          class="sc-1d7ae2ca-1 cEiquW"
         >
           <input
             autocomplete="off"
-            class="sc-dcabf394-2 bEpeET"
+            class="sc-1d7ae2ca-2 kKAoFJ"
             data-1pignore="true"
             name="stockLevel"
             required=""
             type="number"
           />
           <label
-            class="sc-dcabf394-3 kZlyhK"
+            class="sc-1d7ae2ca-3 jELmMI"
           >
             Stock Level
           </label>
         </div>
         <div
-          class="sc-dcabf394-4 htoXsm"
+          class="sc-1d7ae2ca-4 cWCuSE"
         >
           <button
-            class="sc-dcabf394-5 dMSBYJ"
+            class="sc-1d7ae2ca-5 dQXobD"
           >
             Cancel
           </button>
           <button
-            class="sc-dcabf394-5 sc-dcabf394-6 dMSBYJ bMZmgT"
+            class="sc-1d7ae2ca-5 sc-1d7ae2ca-6 dQXobD hZQzwN"
+            disabled=""
             type="submit"
           >
             Save
@@ -729,7 +733,7 @@ exports[`renders shared components unchanged 1`] = `
       >
         <tbody>
           <tr
-            class="sc-jTQDJr dqYucq"
+            class="sc-jTQDJr faUJcl"
           >
             <td
               class="sc-eDLKEg eQzojK"
@@ -747,7 +751,7 @@ exports[`renders shared components unchanged 1`] = `
     >
       <tbody>
         <tr
-          class="sc-jTQDJr dqYucq"
+          class="sc-jTQDJr faUJcl"
         >
           <td
             class="sc-eDLKEg eQzojK"
@@ -822,7 +826,7 @@ exports[`renders shared components unchanged 2`] = `
       >
         <tbody>
           <tr
-            class="sc-jTQDJr dqYucq"
+            class="sc-jTQDJr faUJcl"
           >
             <td
               class="sc-eDLKEg eQzojK"
@@ -839,7 +843,7 @@ exports[`renders shared components unchanged 2`] = `
       >
         <tbody>
           <tr
-            class="sc-jTQDJr dqYucq"
+            class="sc-jTQDJr faUJcl"
           >
             <td
               class="sc-eDLKEg sc-gLLuHO eQzojK cRpsBe"
@@ -857,7 +861,7 @@ exports[`renders shared components unchanged 2`] = `
     >
       <tbody>
         <tr
-          class="sc-jTQDJr dqYucq"
+          class="sc-jTQDJr faUJcl"
         >
           <td
             class="sc-eDLKEg sc-gLLuHO eQzojK cRpsBe"
@@ -932,7 +936,7 @@ exports[`renders shared components unchanged 3`] = `
       >
         <tbody>
           <tr
-            class="sc-jTQDJr dqYucq"
+            class="sc-jTQDJr faUJcl"
           >
             <td
               class="sc-eDLKEg eQzojK"
@@ -949,7 +953,7 @@ exports[`renders shared components unchanged 3`] = `
       >
         <tbody>
           <tr
-            class="sc-jTQDJr dqYucq"
+            class="sc-jTQDJr faUJcl"
           >
             <td
               class="sc-eDLKEg sc-gLLuHO eQzojK cRpsBe"
@@ -962,13 +966,13 @@ exports[`renders shared components unchanged 3`] = `
     </div>
     <div>
       <button
-        class="sc-iBdoyZ sc-fsYfxw dhPZzK cTCBIB"
+        class="sc-iBdoyZ sc-fsYfxw coKrmd cTCBIB"
       />
     </div>
   </body>,
   "container": <div>
     <button
-      class="sc-iBdoyZ sc-fsYfxw dhPZzK cTCBIB"
+      class="sc-iBdoyZ sc-fsYfxw coKrmd cTCBIB"
     />
   </div>,
   "debug": [Function],
@@ -1035,7 +1039,7 @@ exports[`renders shared components unchanged 4`] = `
       >
         <tbody>
           <tr
-            class="sc-jTQDJr dqYucq"
+            class="sc-jTQDJr faUJcl"
           >
             <td
               class="sc-eDLKEg eQzojK"
@@ -1052,7 +1056,7 @@ exports[`renders shared components unchanged 4`] = `
       >
         <tbody>
           <tr
-            class="sc-jTQDJr dqYucq"
+            class="sc-jTQDJr faUJcl"
           >
             <td
               class="sc-eDLKEg sc-gLLuHO eQzojK cRpsBe"
@@ -1065,18 +1069,18 @@ exports[`renders shared components unchanged 4`] = `
     </div>
     <div>
       <button
-        class="sc-iBdoyZ sc-fsYfxw dhPZzK cTCBIB"
+        class="sc-iBdoyZ sc-fsYfxw coKrmd cTCBIB"
       />
     </div>
     <div>
       <div
-        class="sc-qZruQ fwKsVo"
+        class="sc-qZruQ hrayws"
       />
     </div>
   </body>,
   "container": <div>
     <div
-      class="sc-qZruQ fwKsVo"
+      class="sc-qZruQ hrayws"
     />
   </div>,
   "debug": [Function],
@@ -1143,7 +1147,7 @@ exports[`renders shared components unchanged 5`] = `
       >
         <tbody>
           <tr
-            class="sc-jTQDJr dqYucq"
+            class="sc-jTQDJr faUJcl"
           >
             <td
               class="sc-eDLKEg eQzojK"
@@ -1160,7 +1164,7 @@ exports[`renders shared components unchanged 5`] = `
       >
         <tbody>
           <tr
-            class="sc-jTQDJr dqYucq"
+            class="sc-jTQDJr faUJcl"
           >
             <td
               class="sc-eDLKEg sc-gLLuHO eQzojK cRpsBe"
@@ -1173,12 +1177,12 @@ exports[`renders shared components unchanged 5`] = `
     </div>
     <div>
       <button
-        class="sc-iBdoyZ sc-fsYfxw dhPZzK cTCBIB"
+        class="sc-iBdoyZ sc-fsYfxw coKrmd cTCBIB"
       />
     </div>
     <div>
       <div
-        class="sc-qZruQ fwKsVo"
+        class="sc-qZruQ hrayws"
       />
     </div>
     <div>
@@ -1363,7 +1367,7 @@ exports[`renders table components unchanged 1`] = `
         </thead>
         <tbody>
           <tr
-            class="sc-jTQDJr dqYucq"
+            class="sc-jTQDJr faUJcl"
             data-id="0"
             data-pending-delete="false"
           >
@@ -1386,7 +1390,7 @@ exports[`renders table components unchanged 1`] = `
               class="sc-eDLKEg sc-gLLuHO bgfuxj cRpsBe"
             >
               <button
-                class="sc-iBdoyZ sc-fsYfxw dhPZzK cTCBIB"
+                class="sc-iBdoyZ sc-fsYfxw coKrmd cTCBIB"
               >
                 <svg
                   role="presentation"
@@ -1400,7 +1404,7 @@ exports[`renders table components unchanged 1`] = `
                 </svg>
               </button>
               <button
-                class="sc-iBdoyZ sc-fsYfxw dhPZzK cTCBIB"
+                class="sc-iBdoyZ sc-fsYfxw coKrmd cTCBIB"
               >
                 <svg
                   role="presentation"
@@ -1423,7 +1427,7 @@ exports[`renders table components unchanged 1`] = `
         >
           <tbody>
             <tr
-              class="sc-jTQDJr dqYucq"
+              class="sc-jTQDJr faUJcl"
             >
               <td
                 class="sc-eDLKEg sc-gLLuHO gVlCde cRpsBe"
@@ -1459,10 +1463,11 @@ exports[`renders table components unchanged 1`] = `
                 />
               </td>
               <td
-                class="sc-eDLKEg sc-gLLuHO sc-914594a7-0 bgfuxj cRpsBe MCuAw"
+                class="sc-eDLKEg sc-gLLuHO sc-590c3d-0 bgfuxj cRpsBe bEAkWe"
               >
                 <button
-                  class="sc-iBdoyZ sc-fsYfxw dhPZzK cTCBIB"
+                  class="sc-iBdoyZ sc-fsYfxw coKrmd cTCBIB"
+                  disabled=""
                   type="submit"
                 >
                   <svg
@@ -1482,12 +1487,12 @@ exports[`renders table components unchanged 1`] = `
         </table>
       </form>
       <div
-        class="sc-qZruQ fwKsVo"
+        class="sc-qZruQ hrayws"
       >
         <div
           class="sc-kFCrIq eokhSx"
         >
-          Are You sure you want to delete
+          Are you sure you want to delete
            
           <strong />
           ?
@@ -1508,10 +1513,10 @@ exports[`renders table components unchanged 1`] = `
         </div>
       </div>
       <div
-        class="sc-qZruQ fwKsVo"
+        class="sc-qZruQ hrayws"
       >
         <form
-          class="sc-dcabf394-0 kVgRUZ"
+          class="sc-1d7ae2ca-0 dWJHpv"
         >
           <input
             name="id"
@@ -1519,66 +1524,67 @@ exports[`renders table components unchanged 1`] = `
             value=""
           />
           <div
-            class="sc-dcabf394-1 jmeQUs"
+            class="sc-1d7ae2ca-1 cEiquW"
           >
             <input
               autocomplete="off"
-              class="sc-dcabf394-2 bEpeET"
+              class="sc-1d7ae2ca-2 kKAoFJ"
               data-1pignore="true"
               name="name"
               required=""
               type="text"
             />
             <label
-              class="sc-dcabf394-3 kZlyhK"
+              class="sc-1d7ae2ca-3 jELmMI"
             >
               Name
             </label>
           </div>
           <div
-            class="sc-dcabf394-1 jmeQUs"
+            class="sc-1d7ae2ca-1 cEiquW"
           >
             <input
               autocomplete="off"
-              class="sc-dcabf394-2 bEpeET"
+              class="sc-1d7ae2ca-2 kKAoFJ"
               data-1pignore="true"
               name="manufacturer"
               required=""
               type="text"
             />
             <label
-              class="sc-dcabf394-3 kZlyhK"
+              class="sc-1d7ae2ca-3 jELmMI"
             >
               Manufacturer
             </label>
           </div>
           <div
-            class="sc-dcabf394-1 jmeQUs"
+            class="sc-1d7ae2ca-1 cEiquW"
           >
             <input
               autocomplete="off"
-              class="sc-dcabf394-2 bEpeET"
+              class="sc-1d7ae2ca-2 kKAoFJ"
               data-1pignore="true"
               name="stockLevel"
               required=""
               type="number"
             />
             <label
-              class="sc-dcabf394-3 kZlyhK"
+              class="sc-1d7ae2ca-3 jELmMI"
             >
               Stock Level
             </label>
           </div>
           <div
-            class="sc-dcabf394-4 htoXsm"
+            class="sc-1d7ae2ca-4 cWCuSE"
           >
             <button
-              class="sc-dcabf394-5 dMSBYJ"
+              class="sc-1d7ae2ca-5 dQXobD"
             >
               Cancel
             </button>
             <button
-              class="sc-dcabf394-5 sc-dcabf394-6 dMSBYJ bMZmgT"
+              class="sc-1d7ae2ca-5 sc-1d7ae2ca-6 dQXobD hZQzwN"
+              disabled=""
               type="submit"
             >
               Save
@@ -1618,7 +1624,7 @@ exports[`renders table components unchanged 1`] = `
       </thead>
       <tbody>
         <tr
-          class="sc-jTQDJr dqYucq"
+          class="sc-jTQDJr faUJcl"
           data-id="0"
           data-pending-delete="false"
         >
@@ -1641,7 +1647,7 @@ exports[`renders table components unchanged 1`] = `
             class="sc-eDLKEg sc-gLLuHO bgfuxj cRpsBe"
           >
             <button
-              class="sc-iBdoyZ sc-fsYfxw dhPZzK cTCBIB"
+              class="sc-iBdoyZ sc-fsYfxw coKrmd cTCBIB"
             >
               <svg
                 role="presentation"
@@ -1655,7 +1661,7 @@ exports[`renders table components unchanged 1`] = `
               </svg>
             </button>
             <button
-              class="sc-iBdoyZ sc-fsYfxw dhPZzK cTCBIB"
+              class="sc-iBdoyZ sc-fsYfxw coKrmd cTCBIB"
             >
               <svg
                 role="presentation"
@@ -1678,7 +1684,7 @@ exports[`renders table components unchanged 1`] = `
       >
         <tbody>
           <tr
-            class="sc-jTQDJr dqYucq"
+            class="sc-jTQDJr faUJcl"
           >
             <td
               class="sc-eDLKEg sc-gLLuHO gVlCde cRpsBe"
@@ -1714,10 +1720,11 @@ exports[`renders table components unchanged 1`] = `
               />
             </td>
             <td
-              class="sc-eDLKEg sc-gLLuHO sc-914594a7-0 bgfuxj cRpsBe MCuAw"
+              class="sc-eDLKEg sc-gLLuHO sc-590c3d-0 bgfuxj cRpsBe bEAkWe"
             >
               <button
-                class="sc-iBdoyZ sc-fsYfxw dhPZzK cTCBIB"
+                class="sc-iBdoyZ sc-fsYfxw coKrmd cTCBIB"
+                disabled=""
                 type="submit"
               >
                 <svg
@@ -1737,12 +1744,12 @@ exports[`renders table components unchanged 1`] = `
       </table>
     </form>
     <div
-      class="sc-qZruQ fwKsVo"
+      class="sc-qZruQ hrayws"
     >
       <div
         class="sc-kFCrIq eokhSx"
       >
-        Are You sure you want to delete
+        Are you sure you want to delete
          
         <strong />
         ?
@@ -1763,10 +1770,10 @@ exports[`renders table components unchanged 1`] = `
       </div>
     </div>
     <div
-      class="sc-qZruQ fwKsVo"
+      class="sc-qZruQ hrayws"
     >
       <form
-        class="sc-dcabf394-0 kVgRUZ"
+        class="sc-1d7ae2ca-0 dWJHpv"
       >
         <input
           name="id"
@@ -1774,66 +1781,67 @@ exports[`renders table components unchanged 1`] = `
           value=""
         />
         <div
-          class="sc-dcabf394-1 jmeQUs"
+          class="sc-1d7ae2ca-1 cEiquW"
         >
           <input
             autocomplete="off"
-            class="sc-dcabf394-2 bEpeET"
+            class="sc-1d7ae2ca-2 kKAoFJ"
             data-1pignore="true"
             name="name"
             required=""
             type="text"
           />
           <label
-            class="sc-dcabf394-3 kZlyhK"
+            class="sc-1d7ae2ca-3 jELmMI"
           >
             Name
           </label>
         </div>
         <div
-          class="sc-dcabf394-1 jmeQUs"
+          class="sc-1d7ae2ca-1 cEiquW"
         >
           <input
             autocomplete="off"
-            class="sc-dcabf394-2 bEpeET"
+            class="sc-1d7ae2ca-2 kKAoFJ"
             data-1pignore="true"
             name="manufacturer"
             required=""
             type="text"
           />
           <label
-            class="sc-dcabf394-3 kZlyhK"
+            class="sc-1d7ae2ca-3 jELmMI"
           >
             Manufacturer
           </label>
         </div>
         <div
-          class="sc-dcabf394-1 jmeQUs"
+          class="sc-1d7ae2ca-1 cEiquW"
         >
           <input
             autocomplete="off"
-            class="sc-dcabf394-2 bEpeET"
+            class="sc-1d7ae2ca-2 kKAoFJ"
             data-1pignore="true"
             name="stockLevel"
             required=""
             type="number"
           />
           <label
-            class="sc-dcabf394-3 kZlyhK"
+            class="sc-1d7ae2ca-3 jELmMI"
           >
             Stock Level
           </label>
         </div>
         <div
-          class="sc-dcabf394-4 htoXsm"
+          class="sc-1d7ae2ca-4 cWCuSE"
         >
           <button
-            class="sc-dcabf394-5 dMSBYJ"
+            class="sc-1d7ae2ca-5 dQXobD"
           >
             Cancel
           </button>
           <button
-            class="sc-dcabf394-5 sc-dcabf394-6 dMSBYJ bMZmgT"
+            class="sc-1d7ae2ca-5 sc-1d7ae2ca-6 dQXobD hZQzwN"
+            disabled=""
             type="submit"
           >
             Save

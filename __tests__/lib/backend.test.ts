@@ -40,7 +40,7 @@ describe("DBase", () => {
       stockLevel: 0,
     });
 
-    expect(JSON.stringify(await fetchedDbase.json())).toMatch(
+    expect(JSON.stringify(fetchedDbase)).toMatch(
       JSON.stringify(successResponseObj)
     );
     expect(fetch.mock.calls.length).toEqual(1);
@@ -57,7 +57,7 @@ describe("DBase", () => {
       stockLevel: 0,
     });
 
-    expect(JSON.stringify(await fetchedDbase.json())).toMatch(
+    expect(JSON.stringify(fetchedDbase)).toMatch(
       JSON.stringify(successResponseObj)
     );
     expect(fetch.mock.calls.length).toEqual(1);
@@ -70,7 +70,7 @@ describe("DBase", () => {
 
     const fetchedDbase = await remove(0);
 
-    expect(JSON.stringify(await fetchedDbase.json())).toMatch(
+    expect(JSON.stringify(fetchedDbase)).toMatch(
       JSON.stringify(successResponseObj)
     );
     expect(fetch.mock.calls.length).toEqual(1);
