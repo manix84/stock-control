@@ -726,13 +726,37 @@ exports[`renders shared components unchanged 1`] = `
     <div>
       <table
         class="sc-hLQTFJ gWdLkF"
-      />
+      >
+        <tbody>
+          <tr
+            class="sc-jTQDJr dqYucq"
+          >
+            <td
+              class="sc-eDLKEg eQzojK"
+            >
+              Hello World
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </body>,
   "container": <div>
     <table
       class="sc-hLQTFJ gWdLkF"
-    />
+    >
+      <tbody>
+        <tr
+          class="sc-jTQDJr dqYucq"
+        >
+          <td
+            class="sc-eDLKEg eQzojK"
+          >
+            Hello World
+          </td>
+        </tr>
+      </tbody>
+    </table>
   </div>,
   "debug": [Function],
   "findAllByAltText": [Function],
@@ -795,18 +819,54 @@ exports[`renders shared components unchanged 2`] = `
     <div>
       <table
         class="sc-hLQTFJ gWdLkF"
-      />
+      >
+        <tbody>
+          <tr
+            class="sc-jTQDJr dqYucq"
+          >
+            <td
+              class="sc-eDLKEg eQzojK"
+            >
+              Hello World
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
     <div>
-      <td
-        class="sc-eDLKEg eQzojK"
-      />
+      <table
+        class="sc-hLQTFJ gWdLkF"
+      >
+        <tbody>
+          <tr
+            class="sc-jTQDJr dqYucq"
+          >
+            <td
+              class="sc-eDLKEg sc-gLLuHO eQzojK cRpsBe"
+            >
+              Hello World
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </body>,
   "container": <div>
-    <td
-      class="sc-eDLKEg eQzojK"
-    />
+    <table
+      class="sc-hLQTFJ gWdLkF"
+    >
+      <tbody>
+        <tr
+          class="sc-jTQDJr dqYucq"
+        >
+          <td
+            class="sc-eDLKEg sc-gLLuHO eQzojK cRpsBe"
+          >
+            Hello World
+          </td>
+        </tr>
+      </tbody>
+    </table>
   </div>,
   "debug": [Function],
   "findAllByAltText": [Function],
@@ -869,185 +929,36 @@ exports[`renders shared components unchanged 3`] = `
     <div>
       <table
         class="sc-hLQTFJ gWdLkF"
-      />
+      >
+        <tbody>
+          <tr
+            class="sc-jTQDJr dqYucq"
+          >
+            <td
+              class="sc-eDLKEg eQzojK"
+            >
+              Hello World
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
-    <div>
-      <td
-        class="sc-eDLKEg eQzojK"
-      />
-    </div>
-    <div>
-      <tr
-        class="sc-jTQDJr dqYucq"
-      />
-    </div>
-  </body>,
-  "container": <div>
-    <tr
-      class="sc-jTQDJr dqYucq"
-    />
-  </div>,
-  "debug": [Function],
-  "findAllByAltText": [Function],
-  "findAllByDisplayValue": [Function],
-  "findAllByLabelText": [Function],
-  "findAllByPlaceholderText": [Function],
-  "findAllByRole": [Function],
-  "findAllByTestId": [Function],
-  "findAllByText": [Function],
-  "findAllByTitle": [Function],
-  "findByAltText": [Function],
-  "findByDisplayValue": [Function],
-  "findByLabelText": [Function],
-  "findByPlaceholderText": [Function],
-  "findByRole": [Function],
-  "findByTestId": [Function],
-  "findByText": [Function],
-  "findByTitle": [Function],
-  "getAllByAltText": [Function],
-  "getAllByDisplayValue": [Function],
-  "getAllByLabelText": [Function],
-  "getAllByPlaceholderText": [Function],
-  "getAllByRole": [Function],
-  "getAllByTestId": [Function],
-  "getAllByText": [Function],
-  "getAllByTitle": [Function],
-  "getByAltText": [Function],
-  "getByDisplayValue": [Function],
-  "getByLabelText": [Function],
-  "getByPlaceholderText": [Function],
-  "getByRole": [Function],
-  "getByTestId": [Function],
-  "getByText": [Function],
-  "getByTitle": [Function],
-  "queryAllByAltText": [Function],
-  "queryAllByDisplayValue": [Function],
-  "queryAllByLabelText": [Function],
-  "queryAllByPlaceholderText": [Function],
-  "queryAllByRole": [Function],
-  "queryAllByTestId": [Function],
-  "queryAllByText": [Function],
-  "queryAllByTitle": [Function],
-  "queryByAltText": [Function],
-  "queryByDisplayValue": [Function],
-  "queryByLabelText": [Function],
-  "queryByPlaceholderText": [Function],
-  "queryByRole": [Function],
-  "queryByTestId": [Function],
-  "queryByText": [Function],
-  "queryByTitle": [Function],
-  "rerender": [Function],
-  "unmount": [Function],
-}
-`;
-
-exports[`renders shared components unchanged 4`] = `
-{
-  "asFragment": [Function],
-  "baseElement": <body>
     <div>
       <table
         class="sc-hLQTFJ gWdLkF"
-      />
-    </div>
-    <div>
-      <td
-        class="sc-eDLKEg eQzojK"
-      />
-    </div>
-    <div>
-      <tr
-        class="sc-jTQDJr dqYucq"
-      />
-    </div>
-    <div>
-      <td
-        class="sc-eDLKEg sc-gLLuHO eQzojK cRpsBe"
-      />
-    </div>
-  </body>,
-  "container": <div>
-    <td
-      class="sc-eDLKEg sc-gLLuHO eQzojK cRpsBe"
-    />
-  </div>,
-  "debug": [Function],
-  "findAllByAltText": [Function],
-  "findAllByDisplayValue": [Function],
-  "findAllByLabelText": [Function],
-  "findAllByPlaceholderText": [Function],
-  "findAllByRole": [Function],
-  "findAllByTestId": [Function],
-  "findAllByText": [Function],
-  "findAllByTitle": [Function],
-  "findByAltText": [Function],
-  "findByDisplayValue": [Function],
-  "findByLabelText": [Function],
-  "findByPlaceholderText": [Function],
-  "findByRole": [Function],
-  "findByTestId": [Function],
-  "findByText": [Function],
-  "findByTitle": [Function],
-  "getAllByAltText": [Function],
-  "getAllByDisplayValue": [Function],
-  "getAllByLabelText": [Function],
-  "getAllByPlaceholderText": [Function],
-  "getAllByRole": [Function],
-  "getAllByTestId": [Function],
-  "getAllByText": [Function],
-  "getAllByTitle": [Function],
-  "getByAltText": [Function],
-  "getByDisplayValue": [Function],
-  "getByLabelText": [Function],
-  "getByPlaceholderText": [Function],
-  "getByRole": [Function],
-  "getByTestId": [Function],
-  "getByText": [Function],
-  "getByTitle": [Function],
-  "queryAllByAltText": [Function],
-  "queryAllByDisplayValue": [Function],
-  "queryAllByLabelText": [Function],
-  "queryAllByPlaceholderText": [Function],
-  "queryAllByRole": [Function],
-  "queryAllByTestId": [Function],
-  "queryAllByText": [Function],
-  "queryAllByTitle": [Function],
-  "queryByAltText": [Function],
-  "queryByDisplayValue": [Function],
-  "queryByLabelText": [Function],
-  "queryByPlaceholderText": [Function],
-  "queryByRole": [Function],
-  "queryByTestId": [Function],
-  "queryByText": [Function],
-  "queryByTitle": [Function],
-  "rerender": [Function],
-  "unmount": [Function],
-}
-`;
-
-exports[`renders shared components unchanged 5`] = `
-{
-  "asFragment": [Function],
-  "baseElement": <body>
-    <div>
-      <table
-        class="sc-hLQTFJ gWdLkF"
-      />
-    </div>
-    <div>
-      <td
-        class="sc-eDLKEg eQzojK"
-      />
-    </div>
-    <div>
-      <tr
-        class="sc-jTQDJr dqYucq"
-      />
-    </div>
-    <div>
-      <td
-        class="sc-eDLKEg sc-gLLuHO eQzojK cRpsBe"
-      />
+      >
+        <tbody>
+          <tr
+            class="sc-jTQDJr dqYucq"
+          >
+            <td
+              class="sc-eDLKEg sc-gLLuHO eQzojK cRpsBe"
+            >
+              Hello World
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
     <div>
       <button
@@ -1114,29 +1025,43 @@ exports[`renders shared components unchanged 5`] = `
 }
 `;
 
-exports[`renders shared components unchanged 6`] = `
+exports[`renders shared components unchanged 4`] = `
 {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
       <table
         class="sc-hLQTFJ gWdLkF"
-      />
+      >
+        <tbody>
+          <tr
+            class="sc-jTQDJr dqYucq"
+          >
+            <td
+              class="sc-eDLKEg eQzojK"
+            >
+              Hello World
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
     <div>
-      <td
-        class="sc-eDLKEg eQzojK"
-      />
-    </div>
-    <div>
-      <tr
-        class="sc-jTQDJr dqYucq"
-      />
-    </div>
-    <div>
-      <td
-        class="sc-eDLKEg sc-gLLuHO eQzojK cRpsBe"
-      />
+      <table
+        class="sc-hLQTFJ gWdLkF"
+      >
+        <tbody>
+          <tr
+            class="sc-jTQDJr dqYucq"
+          >
+            <td
+              class="sc-eDLKEg sc-gLLuHO eQzojK cRpsBe"
+            >
+              Hello World
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
     <div>
       <button
@@ -1208,29 +1133,43 @@ exports[`renders shared components unchanged 6`] = `
 }
 `;
 
-exports[`renders shared components unchanged 7`] = `
+exports[`renders shared components unchanged 5`] = `
 {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
       <table
         class="sc-hLQTFJ gWdLkF"
-      />
+      >
+        <tbody>
+          <tr
+            class="sc-jTQDJr dqYucq"
+          >
+            <td
+              class="sc-eDLKEg eQzojK"
+            >
+              Hello World
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
     <div>
-      <td
-        class="sc-eDLKEg eQzojK"
-      />
-    </div>
-    <div>
-      <tr
-        class="sc-jTQDJr dqYucq"
-      />
-    </div>
-    <div>
-      <td
-        class="sc-eDLKEg sc-gLLuHO eQzojK cRpsBe"
-      />
+      <table
+        class="sc-hLQTFJ gWdLkF"
+      >
+        <tbody>
+          <tr
+            class="sc-jTQDJr dqYucq"
+          >
+            <td
+              class="sc-eDLKEg sc-gLLuHO eQzojK cRpsBe"
+            >
+              Hello World
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
     <div>
       <button

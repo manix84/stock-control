@@ -52,17 +52,27 @@ it("renders deleteDialogue components unchanged", () => {
 });
 
 it("renders shared components unchanged", () => {
-  const mainTable = render(<MainTable />);
-  expect(mainTable).toMatchSnapshot();
+  const testTable_cell = render(
+    <MainTable>
+      <tbody>
+        <Row>
+          <Cell>Hello World</Cell>
+        </Row>
+      </tbody>
+    </MainTable>
+  );
+  expect(testTable_cell).toMatchSnapshot();
 
-  const cell = render(<Cell />);
-  expect(cell).toMatchSnapshot();
-
-  const row = render(<Row />);
-  expect(row).toMatchSnapshot();
-
-  const bodyCell = render(<BodyCell />);
-  expect(bodyCell).toMatchSnapshot();
+  const testTable_bodyCell = render(
+    <MainTable>
+      <tbody>
+        <Row>
+          <BodyCell>Hello World</BodyCell>
+        </Row>
+      </tbody>
+    </MainTable>
+  );
+  expect(testTable_bodyCell).toMatchSnapshot();
 
   const iconButton = render(<IconButton />);
   expect(iconButton).toMatchSnapshot();
