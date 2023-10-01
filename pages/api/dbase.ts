@@ -21,6 +21,8 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
   const missingData = [];
 
   switch (req.method) {
+    case "GET": // Get Data
+      return res.status(200).json(dbase);
     case "PUT": // Put Data
       if (!name) missingData.push("name");
       if (!manufacturer) missingData.push("manufacturer");
@@ -38,8 +40,6 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       }
       await db.write();
       return res.status(200).json({});
-    case "GET": // Get Data
-      return res.status(200).json(dbase);
     case "DELETE":
       if (id === undefined) {
         return res.status(400).json({
